@@ -1,18 +1,19 @@
 package com.websystique.springmvc.form;
 
 import javax.validation.constraints.NotNull;
+
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import javax.validation.constraints.Size;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.validator.constraints.Email;
 
 public class Spitter {
 
-  private Long id;
-  
-  @NotNull
-  @Size(min=5, max=16)
+private Long id;
+
+@NotNull
+@Size(min=5, max=16)
   private String username;
 
   @NotNull
@@ -33,15 +34,16 @@ public class Spitter {
 
   public Spitter() {}
   
-  public Spitter(String username, String password, String firstName, String lastName, String email) {
+  public Spitter(String username, String password, String firstName, String lastName,   String email) 
+  {
     this(null, username, password, firstName, lastName, email);
   }
 
   public Spitter(Long id, String username, String password, String firstName, String lastName, String email) {
     this.id = id;
     this.username = username;
-    this.password = password;
-    this.firstName = firstName;
+		this.password = password;
+		this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
   }
@@ -96,12 +98,12 @@ public class Spitter {
 
   @Override
   public boolean equals(Object that) {
-    return EqualsBuilder.reflectionEquals(this, that, "firstName", "lastName", "username", "password", "email");
+    return EqualsBuilder.reflectionEquals  (this, that, "firstName", "lastName", "username", "password", "email");
   }
   
   @Override
   public int hashCode() {
-    return HashCodeBuilder.reflectionHashCode(this, "firstName", "lastName", "username", "password", "email");
+    return HashCodeBuilder.reflectionHashCode (this, "firstName", "lastName", "username", "password", "email");
   }
 
 }
