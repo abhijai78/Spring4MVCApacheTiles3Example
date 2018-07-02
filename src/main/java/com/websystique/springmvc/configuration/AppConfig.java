@@ -19,11 +19,11 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 		excludeFilters = { @Filter(type = FilterType.ANNOTATION, value = Configuration.class) })
 public class AppConfig extends WebMvcConfigurerAdapter{
 
-	/*@Bean
+	@Bean
 	public InternalResourceViewResolver resolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setViewClass(JstlView.class);
-		resolver.setPrefix("/WEB-INF/views/");
+		/*resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}*/
