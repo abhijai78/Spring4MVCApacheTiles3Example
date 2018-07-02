@@ -11,9 +11,19 @@ public class SpitterController {
 	public String loadRegistrationForm() {
 		return "loadRegisterForm";
 	}
+	
+	@RequestMapping(value = ")
+	public String loadRegistrationForm() {
+		return "loadRegisterForm";
+	}
 
 	@RequestMapping(value = "/register")
 	public String showRegistrationForm() {
+		return "registerForm";
+	}
+	
+	@RequestMapping(value = "/register")
+	public String showRegistrationForm1() {
 		return "registerForm";
 	}
 
